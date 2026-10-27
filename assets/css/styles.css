@@ -1,0 +1,217 @@
+html{scrollbar-gutter:stable}
+*{box-sizing:border-box}
+body{font-family:"Segoe UI",Tahoma,sans-serif;font-weight:400;margin:0;background:#f3f8fc;color:#263746;line-height:1.7}
+button,input,select,textarea,.form-control,.form-select{font-family:inherit}
+h1,h2,h3,h4,h5,h6{font-weight:700}
+body.dark{background:#1e2933;color:#f2f6fa}
+header{background:#e5f3fc;color:#244b67;padding:14px 5%;border-bottom:1px solid #c4dfef}
+body.dark header{background:#263c4b;color:#f2f6fa}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-align:right}
+.brand img{width:100px;height:100px;border-radius:50%;object-fit:cover}
+.brand h1{font-size:clamp(18px,3vw,25px);margin:0}
+.tools{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.brand h1,.tools button,nav.navbar a.nav-link{font-family:inherit}
+.tools button{padding:8px 13px;border-radius:8px;font-size:15px;font-weight:500;transition:background .2s,color .2s}
+.tools button:hover{background:#7cbdeb;color:#244b67}
+body.dark .tools button{background:#354b5b;color:#fff;border-color:#6b8b9f}
+body.dark .tools button:hover{background:#45657b}
+button{padding:8px 11px;margin:3px;border:1px solid #8eb7d0;border-radius:6px;cursor:pointer;background:#fff;color:#244b67;font-size:14px}
+body.dark button{background:#354b5b;color:#fff;border-color:#6b8b9f}
+.cat-btn[data-type="culture"]{background:#3f83aa;color:white}
+.cat-btn[data-type="science"]{background:#4ec7d6;color:white}
+.cat-btn[data-type="family"]{background:#e07b39;color:white}
+.cat-btn[data-type="sports"]{background:#5aa469;color:white}
+.cat-btn[data-type="Music"]{background:#ef1fa3;color:white}
+.categories-section h2{font-size:26px;font-weight:700}
+.category-buttons{display:flex;flex-wrap:wrap;gap:8px}
+.categories-section .cat-btn{min-width:84px;margin:0;padding:10px 15px;font-size:15px;font-weight:400}
+
+
+
+
+
+.container{width:92%;max-width:1050px;margin:22px auto}
+.section{background:#fff;padding:20px;margin-bottom:18px;border:1px solid #d3e1e9;border-radius:8px}
+body.dark .section{background:#293945;border-color:#465c69}
+
+
+
+/* السلايدر */
+.slider-container{position:relative;width:100%;height:450px;overflow:hidden;border-radius:10px;background:#d9e6f2}
+#slider-image{width:100%;height:100%;object-fit:cover;transition:opacity .5s ease;display:block}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;padding:0;margin:0;border-radius:50%;font-size:24px;line-height:1;background:rgba(255,255,255,.8);color:#244b67;border:none}
+body.dark .slider-arrow{background:rgba(30,41,51,.8);color:#fff}
+#nextBtn{left:12px}
+#prevBtn{right:12px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+.dot{width:12px;height:12px;padding:0;margin:0;border-radius:50%;border:2px solid #fff;background:transparent}
+body.dark .dot{background:transparent;border-color:#fff}
+.dot.active,body.dark .dot.active{background:#fff}
+
+.events-grid {display: grid;grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;}
+.event-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden; padding-bottom: 12px;}
+.event-img {width:100%;height:160px;object-fit:cover;display:block;border-radius:6px}
+
+
+/* شبكة أحدث الفعاليات */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{border:1px solid #d3e1e9;border-radius:8px;padding:12px}
+body.dark .card{border-color:#465c69}
+
+/* التذييل */
+footer{background:#d8edf9;color:#244b67;text-align:right;padding:32px 5% 20px;margin-top:40px}
+body.dark footer{background:#263c4b;color:#f2f6fa}
+.footer-columns{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:30px;direction:rtl;text-align:right}
+.footer-column h3{margin:0 0 14px;color:#244b67;font-size:20px}
+body.dark .footer-column h3{color:#9dd8fa}
+.footer-column p{margin:8px 0;color:#244b67}
+body.dark .footer-column p{color:#f2f6fa}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-brand h3{margin:0}
+.footer-logo{width:60px;height:66px;object-fit:contain;background:#fff;padding:3px;border-radius:9px}
+.footer-pages a{display:block;margin:7px 0;padding:8px 12px;border-right:3px solid #76b9dc;border-radius:6px;background:rgba(255,255,255,.5);color:#244b67;text-decoration:none;transition:background .2s,color .2s}
+body.dark .footer-pages a{color:#f2f6fa}
+.footer-pages a:hover{color:#0465ab;background:#fff;text-decoration:none}
+body.dark .footer-pages a:hover{color:#9dd8fa;background:#314c5d}
+.footer-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:12px 0}
+.footer-link{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid #c4dfef;border-radius:8px;background:rgba(255,255,255,.65);color:#244b67;text-decoration:none;transition:background .2s,color .2s}
+.footer-link img{width:20px;height:20px;display:block;margin:0;object-fit:contain;border-radius:4px}
+.footer-link:hover{color:#fff;background:#7cbdeb}
+body.dark .footer-link{border-color:#506b7c;background:#314c5d;color:#f2f6fa}
+body.dark .footer-link:hover{background:#3d6076;color:#fff}
+.footer-email{display:inline-block;margin-top:2px;padding:7px 12px;border:1px solid #b7d5e6;border-radius:20px;background:rgba(255,255,255,.65);color:#0465ab;font-size:15px;font-weight:bold;text-decoration:none;direction:ltr}
+body.dark .footer-email{border-color:#506b7c;background:#314c5d;color:#9dd8fa}
+.footer-email-label{color:#244b67}
+body.dark .footer-email-label{color:#f2f6fa}
+.copyright{margin:24px 0 0;text-align:left;padding-top:14px;border-top:1px solid #aacfe4;color:#244b67}
+body.dark .copyright{border-top-color:#465c69;color:#f2f6fa}
+@media(max-width:850px){.footer-columns{grid-template-columns:1fr 1fr}.footer-contact{grid-column:1/-1}}
+@media(max-width:600px){.footer-columns{grid-template-columns:1fr}.footer-contact{grid-column:auto}}
+
+#topBtn{position:fixed;bottom:20px;left:20px;background:#0465ab;color:#fff;padding:8px 12px;border-radius:50%;font-size:25px;cursor:pointer;border:none}
+body.dark #topBtn{background:#0465ab}
+/* قواعد مشتركة لصفحات المحتوى */
+body.content-page h2{color:#356d91;margin-top:0}
+body.dark.content-page h2{color:#9dd8fa}
+
+body.content-page .event-card p{margin:0;font-size:14px;padding:0}
+body.content-page .event-card h3{margin:4px 0 0;color:#356d91}
+
+body.content-page .badge{display:inline-block;color:#fff;padding:1px 12px;border-radius:12px;font-size:13px;background:#3f83aa}
+body.content-page .badge.culture{background:#4ec7d6}
+body.content-page .badge.sports{background:#5aa469}
+body.content-page .badge.family{background:#e07b39}
+body.content-page .btn{margin-top:auto;align-self:flex-start;background:#3f83aa;color:#fff;text-decoration:none;padding:7px 14px;border-radius:6px;font-size:14px}
+body.content-page .btn:hover{background:#2f6a8d}
+/* Bootstrap Grid with the existing site style */
+nav.navbar{background:#bfe3f7;padding:10px 12px;display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
+body.dark nav.navbar{background:#314c5d}
+nav.navbar a.nav-link{display:inline-block;padding:7px 12px;color:#244b67;text-decoration:none;font-weight:400;font-size:16px;line-height:1.5;border-radius:5px}
+body.dark nav.navbar a.nav-link{color:#fff}
+nav.navbar a.nav-link:hover,nav.navbar a.nav-link.active{background:#7cbdeb}
+
+
+
+.events-grid.row,.grid.row,.team-grid.row{display:flex;gap:0}
+.event-card.card{padding:15px}
+
+.event-card h3{margin-top:12px}
+.event-card h4,.event-card p{padding-left:16px;padding-right:16px}
+
+.card h4{margin-top:12px}
+
+.event-card h4{font-size:18px;font-weight:bold;color:#356d91;margin:12px 12px 8px}
+body.dark .event-card h4{color:#9dd8fa}
+.event-card p{margin-top:8px}
+
+/* ترتيب الهيدر والسلايدر في الصفحة الرئيسية */
+.home-page header .header-top{min-height:100px}
+.home-page .brand img{flex:0 0 100px}
+.home-page .section h2{margin:0 0 14px}
+.home-page .slider-container{height:clamp(300px,42vw,450px)}
+
+/* ألوان أوضح في الوضع الداكن */
+body.dark .section,body.dark .card,body.dark .team-card{background:#293945;color:#f2f6fa}
+body.dark .event-card{background:#324454;color:#f2f6fa}
+body.dark .event-card h3,body.dark .event-card h4,body.dark .card h4{color:#9dd8fa}
+body.dark .event-card p,body.dark .card p,body.dark .team-card p,body.dark li{color:#f2f6fa}
+
+/* فريق العمل */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-top:15px}
+.team-card{background:#fdfdfd;border:1px solid #d3e1e9;padding:15px;border-radius:8px;text-align:center}
+body.dark .team-card{background:#324454;border-color:#465c69}
+.team-card img{width:70px;height:70px;border-radius:50%;margin-bottom:4px;border:2px solid #bcd3e0}
+.team-card h3{margin-top:4px;font-size:20px}
+.team-card h4{font-size:16px}
+.team-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}
+.team-heading h2{margin:0;font-size:32px;color:#174373}
+.team-kicker{margin:0;color:#3984ad;font-weight:400}
+.team-description{margin:2px 0 0;color:#52718a}
+body.dark .team-heading h2{color:#9dd8fa}
+body.dark .team-description{color:#f2f6fa}
+@media(max-width:600px){.team-heading{align-items:flex-start;flex-direction:column}.team-heading h2{font-size:26px}}
+
+/* نستخدم hidden لإخفاء الأقسام والبطاقات */
+[hidden]{display:none !important}
+
+/* معرض الصور في الصفحة الرئيسية */
+#slider-image.fade-out{opacity:0}
+
+/* تنسيق البحث وكروت صفحة الفعاليات */
+body.events-page .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:15px 0}
+body.events-page .filters input,body.events-page .filters select{padding:8px 10px;border:1px solid #a8bfcd;border-radius:5px;font-family:inherit;font-size:14px;background:#fff;color:#222}
+body.dark.events-page .filters input,body.dark.events-page .filters select{background:#1e2933;color:#fff;border-color:#607987}
+body.events-page .filters label{display:flex;align-items:center;gap:6px;font-size:14px}
+body.events-page #fSearch{flex:1;min-width:180px}
+body.events-page .events-grid{margin-top:18px}
+body.events-page .event-card{background:#fff;border:1px solid #d3e1e9;border-radius:10px;padding:15px;display:flex;flex-direction:column;gap:6px}
+body.dark.events-page .event-card{background:#324454;border-color:#465c69}
+body.events-page .event-card img{width:100%;height:180px;object-fit:cover;border-radius:10px;border:2px solid #bcd3e0}
+body.events-page .event-card p{margin:0;font-size:14px;padding:0}
+body.events-page .event-card h3{margin:4px 0 0;color:#356d91}
+body.dark.events-page .event-card h3{color:#9dd8fa}
+body.events-page .badge{align-self:flex-start;color:#fff;padding:1px 12px;border-radius:12px;font-size:13px;background:#3f83aa}
+body.events-page .badge.culture{background:#4ec7d6}
+body.events-page .badge.sports{background:#5aa469}
+body.events-page .badge.family{background:#e07b39}
+body.events-page .btn{margin-top:auto;align-self:flex-start;background:#3f83aa;color:#fff;text-decoration:none;padding:7px 14px;border-radius:6px;font-size:14px}
+body.events-page .btn:hover{background:#2f6a8d}
+body.events-page #noResults{ text-align:center;margin:20px 0}
+body.events-page h2{color:#356d91;margin-top:0}
+body.dark.events-page h2{color:#9dd8fa}
+
+/* تفاصيل الفعالية ومعرض الصور */
+.event-detail-page .back{display:inline-block;margin-bottom:12px;color:#356d91;text-decoration:none}
+body.dark.event-detail-page .back{color:#9dd8fa}
+.event-detail-page .detail-wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
+.event-detail-page #mainImg{width:100%;max-width:340px;height:260px;object-fit:cover;border-radius:10px;border:2px solid #bcd3e0}
+.event-detail-page .detail-info{flex:1;min-width:250px}
+.event-detail-page .detail-info h2{margin:8px 0}
+.event-detail-page .detail-info p{margin:5px 0}
+.event-detail-page .gallery{display:flex;gap:10px;flex-wrap:wrap}
+.event-detail-page .gallery img{width:110px;height:80px;object-fit:cover;border-radius:8px;border:2px solid #bcd3e0;cursor:pointer}
+.event-detail-page #mapFrame{width:100%;height:300px;border:0}
+.event-detail-page #mapPlace{font-size:18px}
+.event-detail-page .event-card{position:relative;background:#fff;border:1px solid #d3e1e9;border-radius:10px;padding:15px;display:flex;flex-direction:column;gap:6px;box-shadow:none}
+body.dark.event-detail-page .event-card{background:#324454;border-color:#465c69}
+.event-detail-page .event-card h3{font-size:17px}
+.event-detail-page .event-card img{width:100%;height:140px;object-fit:cover;border-radius:10px;border:2px solid #bcd3e0}
+.event-detail-page .heart{position:absolute;top:22px;left:22px;margin:0;padding:2px 9px;font-size:20px;border-radius:50%}
+.event-detail-page .heart.on{color:#e0245e}
+
+/* تنسيق نموذج التواصل ورسائل التحقق */
+.contact-page input,.contact-page textarea{display:block;width:100%;max-width:600px;padding:10px;margin:0;border:1px solid #a8bfcd;border-radius:5px;font-family:inherit;font-size:15px;background:#fff;color:#222}
+.contact-page textarea{height:100px;resize:vertical}
+.contact-page #contactForm{row-gap:3px}
+.contact-page .form-label{font-size:17px;margin-bottom:0}
+body.dark.contact-page input,body.dark.contact-page textarea{background:#1e2933;color:#fff;border-color:#607987}
+.contact-page #formAlert,.contact-page .field-wrap{max-width:600px}
+.contact-page .field-error{position:relative;display:block;width:fit-content;max-width:100%;margin:-8px 0 12px auto;padding:7px 11px;border:1px solid #e3a0a0;border-radius:9px;background:#fff3f3;color:#b42318;font-size:13px;line-height:1.4}
+.contact-page .field-error:empty{display:none}
+.contact-page .field-error:not(:empty)::before{content:"";position:absolute;top:-6px;right:14px;width:10px;height:10px;background:#fff3f3;border-top:1px solid #e3a0a0;border-left:1px solid #e3a0a0;transform:rotate(45deg)}
+body.dark.contact-page .field-error,body.dark.contact-page .field-error:not(:empty)::before{background:#3a2930}
+.contact-page input.is-invalid{border-color:#b42318}
+.contact-page #contactForm button[type="submit"]{display:inline-block;width:auto;max-width:none;flex:0 0 auto;padding:7px 12px;font-size:14px;line-height:1.3;margin:0}
+body.dark.contact-page .alert{color:#f2f6fa}

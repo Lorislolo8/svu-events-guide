@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفعاليات - دليل فعاليات الجامعة الافتراضية السورية</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="events-page">
+
+<header>
+  <div class="header-top">
+    <div class="brand">
+      <img src="assets/img/logo.png">
+      <div>
+        <h1>دليل فعاليات الجامعة الافتراضية السورية</h1>
+      </div>
+    </div>
+
+    <div class="tools">
+      
+      <button id="favoriteButton" aria-pressed="false">♡ المفضّلة</button>
+      <button id="themeButton">الوضع الداكن</button>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand">
+  <a class="nav-link" href="index.html">الرئيسية</a>
+  <a class="nav-link active" href="events.html">الفعاليات</a>
+  <a class="nav-link" href="event.html">تفاصيل الفعاليات</a>
+  <a class="nav-link" href="about.html">عن الدليل</a>
+  <a class="nav-link" href="contact.html">اتصل بنا</a>
+</nav>
+
+<main class="container">
+  <section class="welcome">
+    <h2>الفعاليات</h2>
+
+    <div class="filters">
+      <input type="text" id="fSearch" placeholder="ابحث عن فعالية...">
+
+      <select id="fCat">
+        <option value="">كل التصنيفات</option>
+        <option value="science">علمي</option>
+        <option value="culture">ثقافة</option>
+        <option value="sports">رياضة</option>
+        <option value="family">عائلي</option>
+      </select>
+
+      <select id="fLoc">
+        <option value="">كل المواقع</option>
+        <option value="damascus">دمشق</option>
+        <option value="hama">حماة</option>
+        <option value="latakia">اللاذقية</option>
+        <option value="aleppo">حلب</option>
+      </select>
+
+      <label>
+        <span>من تاريخ</span>
+        <input type="date" id="fDate">
+      </label>
+
+      <button type="button" id="resetFiltersBtn">إعادة الضبط</button>
+
+    </div>
+
+    <div class="events-grid row g-3" id="eventsList"></div>
+    <p id="noResults">ما في فعاليات مطابقة للبحث.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-columns">
+      <div class="footer-column footer-about"><div class="footer-brand"><img class="footer-logo" src="assets/img/logo.png" alt="شعار الجامعة الافتراضية السورية"><h3>دليل فعاليات الجامعة الافتراضية السورية</h3></div></div>
+
+      <div class="footer-column footer-pages">
+        <h3>حول موقعنا</h3>
+        <a href="index.html">الرئيسية</a>
+        <a href="events.html">الفعاليات</a>
+        <a href="event.html">تفاصيل الفعاليات</a>
+        <a href="about.html">عن الدليل</a>
+        <a href="contact.html">اتصل بنا</a>
+      </div>
+
+      <div class="footer-column footer-contact"><h3>تواصل معنا</h3>
+        
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.facebook.com/svuonline.org" target="_blank"><img src="assets/img/face.jpg" alt="فيسبوك"><span>فيسبوك</span></a>
+          <a class="footer-link" href="http://instagram.com/syrian_virtual_university" target="_blank"><img src="assets/img/insta.jpg" alt="إنستغرام"><span>إنستغرام</span></a>
+          <a class="footer-link" href="https://www.youtube.com/channel/UCJwPgp0tOp1ZqkzbmDvFSaw" target="_blank"><img src="assets/img/you.jpg" alt="يوتيوب"><span>يوتيوب</span></a>
+          <a class="footer-link" href="https://www.linkedin.com/company/syrianvirtualuniversity" target="_blank"><img src="assets/img/lin.jpg" alt="لينكدإن"><span>لينكدإن</span></a>
+          <a class="footer-link" href="https://twitter.com/SVU_Syria" target="_blank"><img src="assets/img/twe.jpg" alt="تويتر"><span>تويتر</span></a>
+          <a class="footer-link" href="https://t.me/svuonline" target="_blank"><img src="assets/img/tel.jpg" alt="تلغرام"><span>تلغرام</span></a>
+        </div>
+        
+        <p class="footer-email-label">للتواصل عبر البريد الإلكتروني:</p>
+        <p class="footer-email">info@svuonline.org</p>
+      </div>
+    </div></div>
+  <p class="copyright">جميع الحقوق محفوظة © 2026 - دليل فعاليات الجامعة الافتراضية السورية</p>
+</footer>
+
+<button id="topBtn" hidden>↑</button>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
