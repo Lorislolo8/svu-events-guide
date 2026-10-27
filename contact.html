@@ -21,6 +21,7 @@
 
   <div class="tools">
     
+    <button id="favoriteButton" aria-pressed="false">♡ المفضّلة</button>
     <button id="themeButton">الوضع الداكن</button>
   </div>
 </div>
@@ -35,34 +36,49 @@
 </nav>
 
 <main class="container">
-<section class="section">
-  <h2>اتصل بنا</h2>
+<section class="section" id="favSection" hidden>
+  <h2>فعالياتي المفضّلة</h2>
+  <div class="events-grid row g-3" id="favList"></div>
+</section>
 
-  <!-- رسالة نجاح/خطأ -->
+<section class="section contact-card">
+  <p class="contact-eyebrow">أرسل لنا رسالة</p>
+  <h2 class="contact-title">نموذج التواصل</h2>
+  <p class="contact-intro">املأ الحقول التالية لمراجعة بيانات التواصل قبل الإرسال.</p>
+
   <div id="formAlert" class="alert" role="alert" hidden></div>
 
-
-  <form id="contactForm" class="row g-3" novalidate>
-    <label class="form-label col-12" for="name">الاسم:</label>
-    <div class="field-wrap col-12">
-      <input class="form-control" type="text" id="name" required aria-describedby="nameError">
-      <small id="nameError" class="field-error" aria-live="polite"></small>
+  <form id="contactForm" class="row g-3 contact-form" novalidate>
+    <div class="contact-field col-12">
+      <label class="form-label" for="name">الاسم الكامل <span class="required-mark">*</span></label>
+      <div class="field-wrap">
+        <input class="form-control" type="text" id="name" placeholder="أدخل اسمك الكامل" required aria-describedby="nameError">
+        <small id="nameError" class="field-error" aria-live="polite"></small>
+      </div>
     </div>
 
-    <label class="form-label col-12" for="email">البريد الإلكتروني:</label>
-    <div class="field-wrap col-12">
-      <input class="form-control" type="email" id="email" required aria-describedby="emailError">
-      <small id="emailError" class="field-error" aria-live="polite"></small>
-    </div>
-    <label class="form-label col-12" for="message">الرسالة:</label>
-    <div class="field-wrap col-12">
-      <textarea class="form-control" id="message" required aria-describedby="messageError"></textarea>
-      <small id="messageError" class="field-error" aria-live="polite"></small>
+    <div class="contact-field col-12">
+      <label class="form-label" for="email">البريد الإلكتروني <span class="required-mark">*</span></label>
+      <div class="field-wrap">
+        <input class="form-control" type="email" id="email" placeholder="name@example.com" required aria-describedby="emailError">
+        <small id="emailError" class="field-error" aria-live="polite"></small>
+      </div>
     </div>
 
-    <div class="col-12 d-flex justify-content-start"><button type="submit">إرسال</button></div>
+    <div class="contact-field col-12">
+      <label class="form-label" for="message">الرسالة <span class="required-mark">*</span></label>
+      <div class="field-wrap">
+        <textarea class="form-control" id="message" placeholder="اكتب رسالتك هنا..." required aria-describedby="messageError"></textarea>
+        <small id="messageError" class="field-error" aria-live="polite"></small>
+      </div>
+    </div>
+
+    <div class="col-12 contact-submit-wrap">
+      <button type="submit">إرسال الرسالة</button>
+    </div>
   </form>
 </section>
+
 </main>
 
 
