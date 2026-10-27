@@ -361,7 +361,7 @@ function initContactForm(){
     }
 
     alertBox.className = "alert alert-success";
-    alertBox.textContent = "تم التحقق من البيانات بنجاح.";
+    alertBox.textContent = "تم إرسال الرسالة بنجاح.";
     alertBox.hidden = false;
   });
 }
