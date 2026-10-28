@@ -46,9 +46,10 @@
   <h2 class="contact-title">نموذج التواصل</h2>
   <p class="contact-intro">املأ الحقول التالية لمراجعة بيانات التواصل قبل الإرسال.</p>
 
+  <!-- This alert shows validation errors or the success message. -->
   <div id="formAlert" class="alert" role="alert" hidden></div>
 
-  <!-- The form fields are checked in JavaScript. -->
+  <!-- JavaScript checks the name, email, and message before showing a result. -->
   <form id="contactForm" class="row g-3 contact-form" novalidate>
     <div class="contact-field col-12">
       <label class="form-label" for="name">الاسم الكامل <span class="required-mark">*</span></label>

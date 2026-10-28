@@ -45,7 +45,7 @@
   <section class="welcome">
     <h2>الفعاليات</h2>
 
-    <!-- Search and filter controls. -->
+    <!-- These controls filter events by text, category, location, and date. -->
     <div class="filters">
       <input type="text" id="fSearch" placeholder="ابحث عن فعالية...">
 
@@ -74,8 +74,9 @@
 
     </div>
 
-    <!-- Event cards are filled in by JavaScript. -->
+    <!-- JavaScript builds cards from the filtered event list. -->
     <div class="events-grid row g-3" id="eventsList"></div>
+    <!-- This message appears when no events match the filters. -->
     <p id="noResults">ما في فعاليات مطابقة للبحث.</p>
   </section>
 </main>
