@@ -37,7 +37,7 @@ body.dark .section{background:#293945;border-color:#465c69}
 
 
 
-/* السلايدر */
+/* Slider. */
 .slider-container{position:relative;width:100%;height:450px;overflow:hidden;border-radius:10px;background:#d9e6f2}
 #slider-image{width:100%;height:100%;object-fit:cover;transition:opacity .5s ease;display:block}
 .slider-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;padding:0;margin:0;border-radius:50%;font-size:24px;line-height:1;background:rgba(255,255,255,.8);color:#244b67;border:none}
@@ -55,12 +55,12 @@ body.dark .dot{background:transparent;border-color:#fff}
 .event-img {width:100%;height:160px;object-fit:cover;display:block;border-radius:6px}
 
 
-/* شبكة أحدث الفعاليات */
+/* Latest events grid. */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
 .card{border:1px solid #d3e1e9;border-radius:8px;padding:12px}
 body.dark .card{border-color:#465c69}
 
-/* التذييل */
+/* Footer. */
 footer{background:#d8edf9;color:#244b67;text-align:right;padding:32px 5% 20px;margin-top:40px}
 body.dark footer{background:#263c4b;color:#f2f6fa}
 .footer-columns{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:30px;direction:rtl;text-align:right}
@@ -92,7 +92,7 @@ body.dark .copyright{border-top-color:#465c69;color:#f2f6fa}
 
 #topBtn{position:fixed;bottom:20px;left:20px;background:#0465ab;color:#fff;padding:8px 12px;border-radius:50%;font-size:25px;cursor:pointer;border:none}
 body.dark #topBtn{background:#0465ab}
-/* قواعد مشتركة لصفحات المحتوى */
+/* Shared rules for content pages. */
 body.content-page h2{color:#356d91;margin-top:0}
 body.dark.content-page h2{color:#9dd8fa}
 
@@ -126,19 +126,19 @@ nav.navbar a.nav-link:hover,nav.navbar a.nav-link.active{background:#7cbdeb}
 body.dark .event-card h4{color:#9dd8fa}
 .event-card p{margin-top:8px}
 
-/* ترتيب الهيدر والسلايدر في الصفحة الرئيسية */
+/* Home page header and slider layout. */
 .home-page header .header-top{min-height:100px}
 .home-page .brand img{flex:0 0 100px}
 .home-page .section h2{margin:0 0 14px}
 .home-page .slider-container{height:clamp(300px,42vw,450px)}
 
-/* ألوان أوضح في الوضع الداكن */
+/* Improve text contrast in dark mode. */
 body.dark .section,body.dark .card,body.dark .team-card{background:#293945;color:#f2f6fa}
 body.dark .event-card{background:#324454;color:#f2f6fa}
 body.dark .event-card h3,body.dark .event-card h4,body.dark .card h4{color:#9dd8fa}
 body.dark .event-card p,body.dark .card p,body.dark .team-card p,body.dark li{color:#f2f6fa}
 
-/* فريق العمل */
+/* Team section. */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-top:15px}
 .team-card{background:#fdfdfd;border:1px solid #d3e1e9;padding:15px;border-radius:8px;text-align:center}
 body.dark .team-card{background:#324454;border-color:#465c69}
@@ -153,13 +153,13 @@ body.dark .team-heading h2{color:#9dd8fa}
 body.dark .team-description{color:#f2f6fa}
 @media(max-width:600px){.team-heading{align-items:flex-start;flex-direction:column}.team-heading h2{font-size:26px}}
 
-/* نستخدم hidden لإخفاء الأقسام والبطاقات */
+/* Use the hidden attribute to hide sections and cards. */
 [hidden]{display:none !important}
 
-/* معرض الصور في الصفحة الرئيسية */
+/* Home page image slider. */
 #slider-image.fade-out{opacity:0}
 
-/* تنسيق البحث وكروت صفحة الفعاليات */
+/* Search and event cards. */
 body.events-page .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:15px 0}
 body.events-page .filters input,body.events-page .filters select{padding:8px 10px;border:1px solid #a8bfcd;border-radius:5px;font-family:inherit;font-size:14px;background:#fff;color:#222}
 body.dark.events-page .filters input,body.dark.events-page .filters select{background:#1e2933;color:#fff;border-color:#607987}
@@ -182,7 +182,7 @@ body.events-page #noResults{ text-align:center;margin:20px 0}
 body.events-page h2{color:#356d91;margin-top:0}
 body.dark.events-page h2{color:#9dd8fa}
 
-/* تفاصيل الفعالية ومعرض الصور */
+/* Event details and photo gallery. */
 .event-detail-page .back{display:inline-block;margin-bottom:12px;color:#356d91;text-decoration:none}
 body.dark.event-detail-page .back{color:#9dd8fa}
 .event-detail-page .detail-wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
@@ -201,7 +201,7 @@ body.dark.event-detail-page .event-card{background:#324454;border-color:#465c69}
 .event-detail-page .heart{position:absolute;top:22px;left:22px;margin:0;padding:2px 9px;font-size:20px;border-radius:50%}
 .event-detail-page .heart.on{color:#e0245e}
 
-/* تنسيق نموذج التواصل ورسائل التحقق */
+/* Contact form and validation messages. */
 .contact-page .contact-card{
   padding:clamp(24px,4vw,40px);
   border-radius:18px;

@@ -1,7 +1,7 @@
-/* وظائف مشتركة للصفحات */
+/* Shared functions used by the pages. */
 const $ = id => document.getElementById(id);
 
-/* نستخدم بيانات واحدة لصفحة الفعاليات وصفحة التفاصيل. */
+/* Use one set of data for the events list and details pages. */
 var events = [
   {id:1, cat:"science", loc:"damascus", date:"2026-10-30", displayDate:"30 أكتوبر 2026", time:"10:00", img:"assets/img/ندوة التعليم.jpg", gallery:["assets/img/ندوة التعليم.jpg"], t:"ندوة التعليم الإلكتروني", d:"ندوة علمية تناقش مستقبل التعليم الإلكتروني وتطوير تجربة الطالب في الجامعات الافتراضية.", place:"جامعة دمشق – كلية الهندسة المعلوماتية"},
   {id:2, cat:"science", loc:"hama", date:"2026-12-01", displayDate:"1 ديسمبر 2026", time:"09:30", img:"assets/img/اليوم العالمي.jpg", gallery:["assets/img/اليوم العالمي.jpg"], t:"اليوم العلمي لبرنامج المعلوماتية", d:"فعالية علمية لطلاب الهندسة المعلوماتية عن الذكاء الاصطناعي ومشاريع الطلاب ومحاضرات تخصصية.", place:"دار الثقافة – حماة"},
@@ -17,7 +17,7 @@ var cats = {science:"علمي", culture:"ثقافة", sports:"رياضة", famil
 var favs = getFavorites();
 var currentEvent = null;
 
-/* نقرأ المفضلة من المتصفح */
+/* Read saved favorites from the browser. */
 function getFavorites(){
   try {
     return JSON.parse(localStorage.getItem("favs") || "[]").map(Number);
@@ -30,7 +30,7 @@ function saveFavorites(){
   localStorage.setItem("favs", JSON.stringify(favs));
 }
 
-/* نحدّث أسماء الأزرار حسب الحالة */
+/* Update button labels based on their current state. */
 function updateBtns(){
   var dark = document.body.classList.contains("dark");
   var themeButton = $("themeButton");
@@ -74,7 +74,7 @@ function goToTop(){
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
-/* نبني بطاقات الفعاليات المحفوظة */
+/* Build cards for saved events. */
 function favoriteCard(event, showHeart){
   var heartClass = favs.indexOf(event.id) > -1 ? "heart on" : "heart";
   var heartButton = showHeart ?
@@ -113,7 +113,7 @@ function toggleEventFavorite(id){
   updateBtns();
 }
 
-/* الصفحة الرئيسية: السلايدر والتصنيفات */
+/* Home page: slider and categories. */
 function initHomePage(){
   var sliderImage = $("slider-image");
   if(sliderImage){
@@ -180,7 +180,7 @@ function initHomePage(){
   });
 }
 
-/* صفحة الفعاليات: البحث والتصفية */
+/* Events page: search and filters. */
 function renderEventsPage(){
   var query = $("fSearch").value.trim().toLowerCase();
   var category = $("fCat").value;
@@ -229,7 +229,7 @@ function initEventsPage(){
   renderEventsPage();
 }
 
-/* صفحة التفاصيل ومعرض الصور */
+/* Event details page and photo gallery. */
 function initDetailPage(){
   if(!$("detail")) return;
 
@@ -279,7 +279,7 @@ function renderDetailPage(){
   updateBtns();
 }
 
-/* أزرار الفعالية */
+/* Event buttons. */
 function addToCalendar(){
   var date = currentEvent.date.replace(/-/g, "");
   var parts = currentEvent.time.split(":");
@@ -310,7 +310,7 @@ function shareEvent(){
   });
 }
 
-/* نموذج التواصل ورسائل التحقق */
+/* Contact form and validation messages. */
 var MSG = {
   name:"الرجاء إدخال الاسم.",
   emailEmpty:"الرجاء إدخال البريد الإلكتروني.",
@@ -366,7 +366,7 @@ function initContactForm(){
   });
 }
 
-/* نربط الأزرار بعد تحميل محتوى الصفحة */
+/* Connect button actions after the page content loads. */
 var themeButton = $("themeButton");
 if(themeButton) themeButton.addEventListener("click", changeTheme);
 
